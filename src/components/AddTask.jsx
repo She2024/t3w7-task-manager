@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLocalStorage } from 'react-use';
 import { useTasks } from '../contexts/TaskContext';
 
 const AddTask = () => {
@@ -37,10 +36,11 @@ const AddTask = () => {
                 </div>
                 <div>
                     <label>Description: </label>
-                    <input 
+                    <textarea 
                     type='textarea' 
                     name='description' 
-                    value={task.description} onChange={handleChange} required />
+                    value={task.description} 
+                    onChange={handleChange} required />
                 </div>
                 <button type='submit'>Add Task</button>
             </form>
