@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocalStorage } from 'react-use';
+import { useTasks } from '../contexts/TaskContext';
+
+// const TaskData = useContext(TaskContext);
+// const tasks = useTasks();
+// console.log(tasks);
 
 const Tasks = () => {
-    const [tasks, setTasks] = useLocalStorage('tasks', []);
-
-    const deleteTask = (id) => {
-        const updatedTasks = tasks.filter((task) => task.id != id);
-        setTasks(updatedTasks);
-    };
-
+    const {tasks, deleteTask} = useTasks();
     return (
         <div>
             <h2>Tasks</h2>

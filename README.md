@@ -19,3 +19,8 @@ Routes:
 - Infinite Scrolling
 
 - Packages being used: react-router-dom and react-use
+
+- We want to implement:
+    - React Context (No need to pass down the state values)
+        - Global Context
+        - Custom Hooks
